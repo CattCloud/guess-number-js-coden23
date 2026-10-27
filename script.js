@@ -156,7 +156,7 @@ function reiniciarJuego() {
 
   // Resetear celebración visual
   tarjeta.style.borderColor = "#f6d2a8";
-  tarjeta.style.boxShadow = "0 10px 30px rgba(74, 52, 38, 0.12)";
+  tarjeta.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.35)";
 
   console.log("(DEBUG) Nuevo número secreto:", numeroSecreto);
 }
