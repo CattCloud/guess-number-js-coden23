@@ -2,20 +2,33 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Adivina el Número</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Taza Secreta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Mi primer programa en JavaScript</h1>
-  <!-- Conecta tu archivo JS aquí -->
-  <!-- Recuerda: la etiqueta <script> va antes de cerrar </body> -->
+  <div class="game-card" id="game-card">
+    <h1>☕ La Taza Secreta</h1>
+    <p class="subtitle">Escondí un número del 1 al 100 en el fondo de la taza. ¿Cuál es?</p>
 
-    
+    <div class="controls">
+      <input type="number" id="inputIntento" min="1" max="100" placeholder="1 - 100">
+      <button id="btnAdivinar">Probar</button>
+    </div>
 
+    <p id="mensaje"></p>
+    <p id="contador">Sorbos: 0</p>
+    <p id="historial">Tus números: </p>
 
-    <script src="script.js">
-        
-    </script>
+    <button id="btnReiniciar" style="display: none;">
+      ☕ Servir otra taza
+    </button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 
 </html>

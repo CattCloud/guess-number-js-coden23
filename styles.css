@@ -1,0 +1,119 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fdf6ec;
+  color: #4a3426;
+  padding: 20px;
+}
+
+::selection { background: #f6d2a8; }
+
+.game-card {
+  background: #ffffff;
+  border: 1px solid #f6d2a8;
+  border-radius: 20px;
+  padding: 40px 30px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(74, 52, 38, 0.12);
+  transition: border-color 0.5s, box-shadow 0.5s;
+}
+
+h1 {
+  color: #d9690b;
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #7a5c48;
+  margin-bottom: 24px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 12px;
+  font-family: inherit;
+  font-size: 18px;
+  width: 110px;
+  text-align: center;
+  border: 2px solid #f6d2a8;
+  border-radius: 12px;
+  background: #fffaf3;
+  color: #4a3426;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+input::placeholder { color: #8a6a55; }
+input:focus {
+  border-color: #f28c28;
+  box-shadow: 0 0 0 4px rgba(242, 140, 40, 0.25);
+}
+/* Ocultar flechas del input numérico */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { -webkit-appearance: none; }
+input[type=number] { -moz-appearance: textfield; }
+
+button {
+  padding: 12px 24px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 800;
+  background-color: #f28c28;
+  color: #4a3426;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+button:hover {
+  background-color: #f7a557;
+  transform: translateY(-2px);
+}
+button:active { transform: translateY(1px); }
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+#mensaje {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 20px 0;
+  min-height: 40px;
+  transition: font-size 0.3s;
+}
+
+#historial {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #7a5c48;
+}
+
+#btnReiniciar {
+  background-color: #4a3426;
+  color: #fdf6ec;
+  margin-top: 12px;
+}
+#btnReiniciar:hover { background-color: #5e4433; }
+
+@media (max-width: 480px) {
+  .game-card { padding: 30px 20px; }
+  .controls { flex-direction: column; align-items: center; }
+  input { width: 80%; }
+  button { width: 80%; }
+}
